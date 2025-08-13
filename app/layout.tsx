@@ -16,25 +16,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Notes app',
-  description: 'notes app',
+  title: 'NoteHub',
+  description: 'An app that will help you remember everything',
   openGraph: {
-    title: 'Notes app',
-    description: 'notes app',
+    title: 'NoteHub',
+    description: 'An app that will help you remember everything',
     siteName: 'NoteHub',
     url: 'https://08-zustand-livid.vercel.app/',
     images: {
       url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
       width: 1200,
       height: 630,
-      alt: 'NoteHub',
+      alt: 'White sheet of paper centered with white text NoteHub on blue-green background',
     },
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Notes app',
-    description: 'Note app',
-    images: ['https://ac.goit.global/fullstack/react/og-meta.jpg'],
   },
 };
 

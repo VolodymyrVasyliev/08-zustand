@@ -1,5 +1,22 @@
+import { Metadata } from 'next';
 import css from './Home.module.css';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Page note faund',
+  description: 'Page note faund',
+  openGraph: {
+    title: ' Page note faund',
+    description: 'Page note faund',
+    url: '/app/not-found.tsx',
+    images: {
+      url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'White sheet of paper centered with white text NoteHub on blue-green background',
+    },
+  },
+};
 
 const NotFound = () => {
   return (

@@ -5,6 +5,30 @@ type Props = {
   params: Promise<{ slug: string[] }>;
 };
 
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const tag = slug[0] === 'all' ? "All notes" : slug[0]
+  const tagName = tag === 'all' ? undefined : tag;
+  return {
+    title: `${tagName}`,
+    description: `${tagName}`,
+    openGraph: {
+      title: `${tagName}`,
+      description: `${tagName}`,
+      url: `/notes/filter/${tag}`,
+      images: [
+        {
+          url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'NoteHub logo',
+        },
+      ],
+    },
+  };
+}
+
+
 
 export default async function NotesPage({params}: Props) {
   const { slug } = await params;

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
         width: 1200,
         height: 630,
-        alt: 'White sheet of paper centered with white text NoteHub on blue-green background',
+        alt: 'RootLayout with notenub logo',
       },
     ],
   },

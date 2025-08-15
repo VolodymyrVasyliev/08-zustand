@@ -11,7 +11,21 @@ export async function generateMetadata({ params }: Props) {
   const note = await fetchNoteById(id);
   return {
     title: `Note: ${note.title} `,
-    description: note.content.slice(0, 30),
+    description: `Note description: ${note.content.slice(0, 30)}`,
+    openGraph: {
+      title: `Note: ${note.title} `,
+      description: `${note.content.slice(0, 30)}`,
+      siteName: 'NoteHub',
+      url: `https://08-zustand-livid.vercel.app/notes/${id}`,
+      images: [
+        {
+          url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'White sheet of paper centered with white text NoteHub on blue-green background',
+        },
+      ],
+    },
   };
 }
 

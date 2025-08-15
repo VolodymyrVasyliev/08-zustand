@@ -32,13 +32,13 @@ export const fetchNotes = async (
 };
 
 export const fetchNoteById = async (id: string): Promise<Note> => {
-  const res = await axios.get<Note>(`/notes/${id}`, {
+  const response = await axios.get<Note>(`/notes/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
 
-  return res.data;
+  return response.data;
 };
 
 export const createNote = async (noteData: NewNote): Promise<Note> => {

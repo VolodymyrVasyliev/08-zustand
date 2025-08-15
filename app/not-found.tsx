@@ -7,8 +7,9 @@ export const metadata: Metadata = {
   description: 'Page note faund',
   openGraph: {
     title: ' Page note faund',
-    description: 'Page note faund',
-    url: '/app/not-found.tsx',
+    description: '',
+    url: 'https://08-zustand-livid.vercel.app/not-found',
+    siteName: 'NoteHub',
     images: {
       url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
       width: 1200,

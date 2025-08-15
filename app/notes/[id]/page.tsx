@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props) {
     description: `Note description: ${note.content.slice(0, 30)}`,
     openGraph: {
       title: `Note: ${note.title} `,
-      description: `${note.content.slice(0, 30)}`,
+      description: `Note description: ${note.content.slice(0, 10)} ...`,
       siteName: 'NoteHub',
       url: `https://08-zustand-livid.vercel.app/notes/${id}`,
       images: [

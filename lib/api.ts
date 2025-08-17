@@ -47,7 +47,7 @@ export const createNote = async (noteData: NewNote): Promise<Note> => {
       Authorization: `Bearer ${token}`,
     },
   });
-  
+
   return response.data;
 };
 

@@ -17,7 +17,6 @@ type NotesClientProps = {
 };
 
 export default function NotesClient({ initialData, initialTag }: NotesClientProps) {
-  
   const [currentPage, setCurrentPage] = useState(1);
   const [inputValue, setInputValue] = useState('');
   const [debouncedValue, setDebouncedValue] = useState('');

@@ -10,10 +10,10 @@ export async function generateMetadata({ params }: Props) {
   const tag = slug[0] === 'all' ? "All notes" : slug[0]
   return {
     title: `Notes: ${tag}`,
-    description: `Notes with tag:${tag}`,
+    description: `Notes with tag: ${tag}`,
     openGraph: {
-      title: `Note: ${tag}`,
-      description: `Notes with tag:${tag}`,
+      title: `Notes: ${tag}`,
+      description: `Notes with tag: ${tag}`,
       url: `https://08-zustand-livid.vercel.app/notes/filter/${tag}`,
       images: [
         {

@@ -2,7 +2,7 @@
 import css from './NoteForm.module.css';
 import { useId } from 'react';
 import { useRouter } from 'next/navigation';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createNote } from '@/lib/api';
 import { useNoteDraftStore } from '@/lib/store/noteStore';
 import type { NewNote } from '@/types/note';
@@ -23,9 +23,12 @@ const NoteForm = () => {
     setDraft({ ...draft, [event.target.name]: event.target.value });
   };
 
+  const queryClient = useQueryClient();
+
   const { mutate } = useMutation({
     mutationFn: createNote,
     onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['notes'] });
       clearDraft();
       router.push('/notes/filter/all');
     },

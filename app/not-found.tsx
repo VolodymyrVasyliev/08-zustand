@@ -3,11 +3,13 @@ import css from './Home.module.css';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Page note faund',
-  description: 'Page note faund',
+  title: 'Page not found',
+  description:
+    'Page notSorry, but the page you requested was not found. Check the address or return to the main page. faund',
   openGraph: {
-    title: ' Page note faund',
-    description: '',
+    title: ' Page not found',
+    description:
+      'Sorry, but the page you requested was not found. Check the address or return to the main page.',
     url: 'https://08-zustand-livid.vercel.app/not-found',
     siteName: 'NoteHub',
     images: {
